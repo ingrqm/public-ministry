@@ -1,0 +1,95 @@
+{
+  "page": {
+    "app": {
+      "calendar": {
+        "meta": {
+          "title": "Kalendarz - wybierz miejsce"
+        }
+      },
+      "calendarPlace": {
+        "meta": {
+          "title": "Kalendarz - wybierz datę"
+        }
+      },
+      "calendarPlaceDate": {
+        "meta": {
+          "title": "Kalendarz - wybierz termin"
+        }
+      },
+      "congregation-settings": {
+        "meta": {
+          "title": "Ustawienia zboru"
+        }
+      },
+      "congregations": {
+        "meta": {
+          "title": "Zbory"
+        }
+      },
+      "dashboard": {
+        "meta": {
+          "title": "Tablica"
+        }
+      },
+      "places": {
+        "meta": {
+          "title": "Miejsca"
+        }
+      },
+      "plan": {
+        "meta": {
+          "title": "Plan"
+        }
+      },
+      "my-profile": {
+        "meta": {
+          "title": "Mój profil"
+        }
+      },
+      "settings": {
+        "meta": {
+          "title": "Ustawienia"
+        }
+      },
+      "users": {
+        "meta": {
+          "title": "Użytkownicy"
+        }
+      }
+    },
+    "auth": {
+      "password-recovery": {
+        "meta": {
+          "title": "Odzyskiwanie hasła"
+        }
+      },
+      "password-remind": {
+        "meta": {
+          "title": "Przypomnij hasło"
+        }
+      },
+      "sign-in": {
+        "meta": {
+          "title": "Logowanie"
+        }
+      },
+      "sign-up": {
+        "meta": {
+          "title": "Rejestracja"
+        }
+      }
+    },
+    "error": {
+      "not-found": {
+        "meta": {
+          "title": "Błąd 404 - taka strona nie istnieje"
+        }
+      },
+      "not-authorized": {
+        "meta": {
+          "title": "Błąd 401 - brak dostępu"
+        }
+      }
+    }
+  }
+}
