@@ -9,6 +9,7 @@ import { Typography } from '@/components/ui/typography';
 
 import NotAuthorizedImage from '@/assets/images/not-authorized';
 
+// This resolve intl issue on build
 export const dynamic = 'force-dynamic';
 
 type Props = {
