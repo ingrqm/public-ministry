@@ -49,49 +49,42 @@ Title4.args = {
   level: 4,
 };
 
-// Paragraph Story
 const ParagraphTemplate: StoryFn<ParagraphProps> = (args) => <Typography.Paragraph {...args} />;
 export const Paragraph = ParagraphTemplate.bind({});
 Paragraph.args = {
   children: 'This is a paragraph. It contains text that forms a block of content.',
 };
 
-// Blockquote Story
 const BlockquoteTemplate: StoryFn<BlockquoteProps> = (args) => <Typography.Blockquote {...args} />;
 export const Blockquote = BlockquoteTemplate.bind({});
 Blockquote.args = {
   children: 'This is a blockquote. It typically holds a quoted section of text.',
 };
 
-// Code Story
 const CodeTemplate: StoryFn<CodeProps> = (args) => <Typography.Code {...args} />;
 export const Code = CodeTemplate.bind({});
 Code.args = {
   children: 'const a = "Code snippet";',
 };
 
-// Lead Story
 const LeadTemplate: StoryFn<LeadProps> = (args) => <Typography.Lead {...args} />;
 export const Lead = LeadTemplate.bind({});
 Lead.args = {
   children: 'This is a lead paragraph, styled to stand out.',
 };
 
-// Large Text Story
 const LargeTemplate: StoryFn<LargeProps> = (args) => <Typography.Large {...args} />;
 export const Large = LargeTemplate.bind({});
 Large.args = {
   children: 'This is large text.',
 };
 
-// Small Text Story
 const SmallTemplate: StoryFn<SmallProps> = (args) => <Typography.Small {...args} />;
 export const Small = SmallTemplate.bind({});
 Small.args = {
   children: 'This is small text.',
 };
 
-// Muted Text Story
 const MutedTemplate: StoryFn<MutedProps> = (args) => <Typography.Muted {...args} />;
 export const Muted = MutedTemplate.bind({});
 Muted.args = {
