@@ -1,4 +1,12 @@
 {
+  "layout": {
+    "error": {
+      "title": "Świadczenie publiczne",
+      "logo": {
+        "alt": "logo aplikacji"
+      }
+    }
+  },
   "page": {
     "app": {
       "calendar": {
@@ -83,6 +91,14 @@
       "not-found": {
         "meta": {
           "title": "Błąd 404 - taka strona nie istnieje"
+        },
+        "header": {
+          "title": "nie znaleziono"
+        },
+        "body": {
+          "heading": "404",
+          "paragraph": "Niestety, taka strona nie istnieje",
+          "link": "Wróć do aplikacji"
         }
       },
       "not-authorized": {
