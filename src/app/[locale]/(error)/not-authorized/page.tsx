@@ -1,11 +1,10 @@
 import { useTranslations } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
-import Link from 'next/link';
 
 import type { Locale } from '@/i18n';
 
-import { Button } from '@/components/ui/button';
-import { Typography } from '@/components/ui/typography';
+import { Link } from '@/components';
+import { Button, Typography } from '@/components/ui';
 
 import NotAuthorizedImage from '@/assets/images/not-authorized';
 
