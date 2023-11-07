@@ -113,6 +113,19 @@
           "paragraph": "Niestety, nie masz dostępu do tej strony",
           "link": "Wróć do aplikacji"
         }
+      },
+      "not-working": {
+        "meta": {
+          "title": "Błąd 500 - coś poszło nie tak"
+        },
+        "header": {
+          "title": "coś poszło nie tak"
+        },
+        "body": {
+          "heading": "500",
+          "paragraph": "Niestety, coś poszło nie tak",
+          "link": "Wróć do aplikacji"
+        }
       }
     }
   }
