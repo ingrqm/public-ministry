@@ -14,12 +14,15 @@ type LayoutProps = {
   children: ReactNode;
 };
 
+const files = ['not-found', 'not-authorized', 'not-working'];
+
 export default function Layout({ children }: LayoutProps) {
   const pathname = usePathname();
   const filename = pathname.split('/').pop();
+  const key = files.find((file) => file === filename) ?? 'not-found';
 
   const tLayout = useTranslations('layout.error');
-  const tPage = useTranslations(`page.error.${filename}`);
+  const tPage = useTranslations(`page.error.${key}`);
 
   return (
     <div className="flex min-h-screen">
