@@ -1,5 +1,8 @@
 import { useRedirect } from '@/hooks';
 
+// This resolve intl issue on build
+export const dynamic = 'force-dynamic';
+
 export default function Home() {
   const redirect = useRedirect();
 
