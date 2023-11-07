@@ -104,6 +104,14 @@
       "not-authorized": {
         "meta": {
           "title": "Błąd 401 - brak dostępu"
+        },
+        "header": {
+          "title": "brak dostępu"
+        },
+        "body": {
+          "heading": "401",
+          "paragraph": "Niestety, nie masz dostępu do tej strony",
+          "link": "Wróć do aplikacji"
         }
       }
     }
