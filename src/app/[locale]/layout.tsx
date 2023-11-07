@@ -1,10 +1,12 @@
 import type { ReactNode } from 'react';
 
 import { NextIntlClientProvider } from 'next-intl';
-import { Inter } from 'next/font/google';
+import { Inter as FontSans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 
-import { locales } from '@/i18n';
+import getMessages, { locales } from '@/i18n';
+
+import { cn } from '@/utils';
 
 import '@/styles/global.css';
 
@@ -15,7 +17,10 @@ type RootLayoutProps = {
   };
 };
 
-const inter = Inter({ subsets: ['latin'] });
+export const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -25,10 +30,14 @@ export default async function RootLayout({ children, params: { locale } }: RootL
   const isValidLocale = locales.some((cur) => cur === locale);
   if (!isValidLocale) notFound();
 
+  const { messages } = await getMessages({ locale });
+
   return (
     <html lang={locale}>
-      <body className={inter.className}>
-        <NextIntlClientProvider locale={locale}>{children}</NextIntlClientProvider>
+      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
