@@ -9,6 +9,8 @@ import { Typography } from '@/components/ui/typography';
 
 import NotAuthorizedImage from '@/assets/images/not-authorized';
 
+export const dynamic = 'force-dynamic';
+
 type Props = {
   params: {
     locale: Locale;
