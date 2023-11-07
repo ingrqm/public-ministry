@@ -1,7 +1,11 @@
 {
   "cSpell.words": [
+    "autodocs",
     "clsx",
-    "tailwindcss"
+    "lucide",
+    "nextjs",
+    "tailwindcss",
+    "trivago"
   ],
   "i18n-ally.localesPaths": [
     "src/messages"
