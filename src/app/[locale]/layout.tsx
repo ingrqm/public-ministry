@@ -1,8 +1,10 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { Inter } from 'next/font/google';
-import { locales } from '@/i18n';
 import type { ReactNode } from 'react';
+
+import { NextIntlClientProvider } from 'next-intl';
+import { Inter } from 'next/font/google';
+import { notFound } from 'next/navigation';
+
+import { locales } from '@/i18n';
 
 import '@/styles/global.css';
 
