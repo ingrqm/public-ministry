@@ -35,7 +35,7 @@ export default function NotWorking() {
         {t('body.heading')}
       </Typography.Title>
       <Typography.Paragraph className="mt-2">{t('body.paragraph')}</Typography.Paragraph>
-      <Link href={'/dashboard'}>
+      <Link href={'/not-found'}>
         <Button size="lg" className="mt-6">
           {t('body.link')}
         </Button>
