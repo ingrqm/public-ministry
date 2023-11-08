@@ -2,8 +2,6 @@ import { getTranslator } from 'next-intl/server';
 
 import type { Locale } from '@/i18n';
 
-import { Link } from '@/components';
-
 type Props = {
   params: {
     locale: Locale;
@@ -19,9 +17,5 @@ export async function generateMetadata({ params: { locale } }: Props) {
 }
 
 export default function Dashboard() {
-  return (
-    <div>
-      dashboard<Link href="/not-working">test</Link>
-    </div>
-  );
+  return <div>dashboard</div>;
 }

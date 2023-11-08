@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type ReactNode, useEffect } from 'react';
+import { useState, useEffect, type ReactNode } from 'react';
 
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 
 import { motion } from 'framer-motion';
 
-import { Typography } from '@/components/ui/typography';
+import { Typography } from '@/components/ui';
 
 import { useIsMobile } from '@/hooks';
 
