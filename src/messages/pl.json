@@ -64,69 +64,69 @@
     "app": {
       "calendar": {
         "meta": {
-          "title": "Kalendarz - wybierz miejsce"
+          "title": "Kalendarz - wybierz miejsce | Świadczenie publiczne"
         }
       },
       "calendarPlace": {
         "meta": {
-          "title": "Kalendarz - wybierz datę"
+          "title": "Kalendarz - wybierz datę | Świadczenie publiczne"
         }
       },
       "calendarPlaceDate": {
         "meta": {
-          "title": "Kalendarz - wybierz termin"
+          "title": "Kalendarz - wybierz termin | Świadczenie publiczne"
         }
       },
       "congregation-settings": {
         "meta": {
-          "title": "Ustawienia zboru"
+          "title": "Ustawienia zboru | Świadczenie publiczne"
         }
       },
       "congregations": {
         "meta": {
-          "title": "Zbory"
+          "title": "Zbory | Świadczenie publiczne"
         }
       },
       "dashboard": {
         "meta": {
-          "title": "Tablica"
+          "title": "Tablica | Świadczenie publiczne"
         }
       },
       "places": {
         "meta": {
-          "title": "Miejsca"
+          "title": "Miejsca | Świadczenie publiczne"
         }
       },
       "plan": {
         "meta": {
-          "title": "Plan"
+          "title": "Plan | Świadczenie publiczne"
         }
       },
       "my-profile": {
         "meta": {
-          "title": "Mój profil"
+          "title": "Mój profil | Świadczenie publiczne"
         }
       },
       "settings": {
         "meta": {
-          "title": "Ustawienia"
+          "title": "Ustawienia | Świadczenie publiczne"
         }
       },
       "users": {
         "meta": {
-          "title": "Użytkownicy"
+          "title": "Użytkownicy | Świadczenie publiczne"
         }
       }
     },
     "auth": {
       "password-recovery": {
         "meta": {
-          "title": "Odzyskiwanie hasła"
+          "title": "Odzyskiwanie hasła | Świadczenie publiczne"
         }
       },
       "password-remind": {
         "meta": {
-          "title": "Przypomnij hasło"
+          "title": "Przypomnij hasło | Świadczenie publiczne"
         },
         "header": {
           "title": "Przypomnij hasło"
@@ -138,7 +138,7 @@
       },
       "sign-in": {
         "meta": {
-          "title": "Logowanie"
+          "title": "Logowanie | Świadczenie publiczne"
         },
         "header": {
           "title": "Logowanie"
@@ -152,14 +152,14 @@
       },
       "sign-up": {
         "meta": {
-          "title": "Rejestracja"
+          "title": "Rejestracja | Świadczenie publiczne"
         }
       }
     },
     "error": {
       "not-found": {
         "meta": {
-          "title": "Błąd 404 - taka strona nie istnieje"
+          "title": "Błąd 404 - taka strona nie istnieje | Świadczenie publiczne"
         },
         "header": {
           "title": "nie znaleziono"
@@ -172,7 +172,7 @@
       },
       "not-authorized": {
         "meta": {
-          "title": "Błąd 401 - brak dostępu"
+          "title": "Błąd 401 - brak dostępu | Świadczenie publiczne"
         },
         "header": {
           "title": "brak dostępu"
@@ -185,7 +185,7 @@
       },
       "not-working": {
         "meta": {
-          "title": "Błąd 500 - coś poszło nie tak"
+          "title": "Błąd 500 - coś poszło nie tak | Świadczenie publiczne"
         },
         "header": {
           "title": "coś poszło nie tak"
