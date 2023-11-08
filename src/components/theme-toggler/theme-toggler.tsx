@@ -6,6 +6,7 @@ import { MoonIcon } from '@radix-ui/react-icons';
 import { Sun } from 'lucide-react';
 
 import {
+  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -13,7 +14,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui';
-import { Button } from '@/components/ui/button';
 
 export const ThemeToggler = () => {
   const { setTheme } = useTheme();
