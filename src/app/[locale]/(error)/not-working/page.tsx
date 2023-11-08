@@ -6,9 +6,8 @@ import type { Locale } from '@/i18n';
 import { Link } from '@/components';
 import { Button, Typography } from '@/components/ui';
 
-import NotWorkingImage from '@/assets/images/not-working';
+import { NotWorkingIcon } from '@/assets/icons';
 
-// This resolve intl issue on build
 export const dynamic = 'force-dynamic';
 
 type Props = {
@@ -30,7 +29,7 @@ export default function NotWorking() {
 
   return (
     <div className="flex flex-col items-center">
-      <NotWorkingImage />
+      <NotWorkingIcon />
       <Typography.Title level={4} className="mt-9">
         {t('body.heading')}
       </Typography.Title>

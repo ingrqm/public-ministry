@@ -3,7 +3,6 @@
 import { useState, useEffect, type ReactNode } from 'react';
 
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 import { motion } from 'framer-motion';
@@ -13,7 +12,7 @@ import { useIsMobile } from '@/hooks';
 import { ThemeToggler } from '@/components';
 import { Typography } from '@/components/ui';
 
-import LogoImage from '@/assets/images/logo.png';
+import { LogoIcon } from '@/assets/icons';
 
 type LayoutProps = {
   children: ReactNode;
@@ -65,7 +64,7 @@ export default function Layout({ children }: LayoutProps) {
           ease: [0.22, 1, 0.36, 1],
         }}
       >
-        <Image src={LogoImage} alt={tLayout('logo.alt')} priority />
+        <LogoIcon size={100} />
         <motion.div initial="hidden" animate="visible" variants={variants}>
           <Typography.Title level={3}>{tLayout('title')}</Typography.Title>
         </motion.div>

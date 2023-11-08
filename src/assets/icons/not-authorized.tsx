@@ -1,4 +1,4 @@
-const NotAuthorizedImage = () => (
+export const NotAuthorizedIcon = () => (
   <svg width={251} height={294}>
     <g fill="none" fillRule="evenodd">
       <path
@@ -255,5 +255,3 @@ const NotAuthorizedImage = () => (
     </g>
   </svg>
 );
-
-export default NotAuthorizedImage;
