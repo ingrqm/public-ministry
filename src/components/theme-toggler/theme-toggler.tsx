@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 
 import { MoonIcon } from '@radix-ui/react-icons';
@@ -16,6 +17,7 @@ import {
 } from '@/components/ui';
 
 export const ThemeToggler = () => {
+  const t = useTranslations('component.theme-toggler');
   const { setTheme } = useTheme();
 
   return (
@@ -27,11 +29,11 @@ export const ThemeToggler = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuLabel>Motyw</DropdownMenuLabel>
+        <DropdownMenuLabel>{t('label')}</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => setTheme('light')}>Jasny</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>Ciemny</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>Systemowy</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('light')}>{t('light')}</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('dark')}>{t('dark')}</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('system')}>{t('system')}</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

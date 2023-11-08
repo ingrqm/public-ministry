@@ -1,4 +1,12 @@
 {
+  "component": {
+    "theme-toggler": {
+      "label": "Wybierz motyw",
+      "light": "jasny",
+      "dark": "ciemny",
+      "system": "systemowy"
+    }
+  },
   "layout": {
     "error": {
       "title": "Świadczenie publiczne",
