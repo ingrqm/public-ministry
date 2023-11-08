@@ -18,15 +18,18 @@ const Template: StoryFn<typeof Checkbox> = (args) => (
 
 export const Unchecked = Template.bind({});
 Unchecked.args = {
-  defaultChecked: false,
+  checked: false,
+  disabled: false,
 };
 
 export const Checked = Template.bind({});
 Checked.args = {
-  defaultChecked: true,
+  checked: true,
+  disabled: false,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
+  checked: false,
   disabled: true,
 };
