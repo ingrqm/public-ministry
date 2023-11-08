@@ -26,11 +26,11 @@ Vertical.args = {
 export const HorizontalWithText = Template.bind({});
 HorizontalWithText.args = {
   orientation: 'horizontal',
-  children: 'test dlugiego tekstu',
+  children: 'some text',
 };
 
 export const VerticalWithText = Template.bind({});
 VerticalWithText.args = {
   orientation: 'vertical',
-  children: 'test dlugiego tekstu',
+  children: 'some text',
 };
