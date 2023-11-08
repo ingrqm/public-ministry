@@ -1,3 +1,5 @@
+'use client';
+
 import { createContext, forwardRef, useContext, useId } from 'react';
 import type { ComponentPropsWithoutRef, ElementRef, HTMLAttributes } from 'react';
 
