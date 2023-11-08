@@ -4,9 +4,9 @@ import { NextIntlClientProvider } from 'next-intl';
 import { Inter as FontSans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 
-import { ThemeProvider } from '@/providers';
-
 import getMessages, { locales } from '@/i18n';
+
+import { ThemeProvider } from '@/providers';
 
 import { cn } from '@/utils';
 

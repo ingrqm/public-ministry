@@ -8,10 +8,10 @@ import { usePathname } from 'next/navigation';
 
 import { motion } from 'framer-motion';
 
+import { useIsMobile } from '@/hooks';
+
 import { ThemeToggler } from '@/components';
 import { Typography } from '@/components/ui';
-
-import { useIsMobile } from '@/hooks';
 
 import LogoImage from '@/assets/images/logo.png';
 
