@@ -4,6 +4,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { Inter as FontSans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 
+import { ThemeProvider } from '@/providers';
+
 import getMessages, { locales } from '@/i18n';
 
 import { cn } from '@/utils';
@@ -33,10 +35,12 @@ export default async function RootLayout({ children, params: { locale } }: RootL
   const { messages } = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

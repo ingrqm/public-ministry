@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 
 import { motion } from 'framer-motion';
 
+import { ThemeToggler } from '@/components';
 import { Typography } from '@/components/ui';
 
 import { useIsMobile } from '@/hooks';
@@ -56,7 +57,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="flex min-h-screen">
       <motion.div
-        className="hidden md:flex fixed top-0 left-0 min-h-screen bg-primary text-primary-foreground items-center justify-center flex-col gap-6"
+        className="hidden md:flex fixed top-0 left-0 min-h-screen bg-zinc-950 text-white items-center justify-center flex-col gap-6"
         initial={{ width: '100%' }}
         animate={{ width: '50%' }}
         transition={{
@@ -72,15 +73,15 @@ export default function Layout({ children }: LayoutProps) {
           {filename !== null && <Typography.Title level={4}>{tPage('header.title')}</Typography.Title>}
         </motion.div>
       </motion.div>
-      <motion.div
-        key={`${pathname}-content`}
-        className="w-full md:w-1/2 ml-auto flex items-center justify-center flex-col"
-        initial="hidden"
-        animate="visible"
-        variants={variants}
-      >
-        {children}
-      </motion.div>
+      <div className="w-full dark:bg-zinc-900 l md:w-1/2 ml-auto flex items-center justify-center flex-col">
+        <motion.div className="absolute top-4 right-4" initial="hidden" animate="visible" variants={variants}>
+          <ThemeToggler />
+        </motion.div>
+
+        <motion.div key={`${pathname}-content`} initial="hidden" animate="visible" variants={variants}>
+          {children}
+        </motion.div>
+      </div>
     </div>
   );
 }

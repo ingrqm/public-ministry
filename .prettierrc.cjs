@@ -12,6 +12,7 @@ module.exports = {
     '(^next|^next*)',
     '<THIRD_PARTY_MODULES>',
     '(^@/i18n|^@/middleware)',
+    '^@/providers*',
     '^@/components*',
     '^@/hooks*',
     '^@/utils*',
