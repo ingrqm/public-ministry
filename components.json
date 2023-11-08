@@ -9,7 +9,11 @@
     "cssVariables": true
   },
   "aliases": {
+    "providers": "@/providers",
     "components": "@/components",
-    "utils": "@/utils"
+    "hooks": "@/hooks",
+    "utils": "@/utils",
+    "styles": "@/styles",
+    "assets": "@/assets"
   }
 }
