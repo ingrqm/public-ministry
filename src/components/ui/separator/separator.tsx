@@ -23,7 +23,9 @@ const Separator = forwardRef<
       )}
       {...props}
     />
-    {children && <div className="bg-white dark:bg-zinc-950 z-[1] px-2">{children}</div>}
+    {children && (
+      <div className="bg-white dark:bg-zinc-900 z-[1] px-2 flex justify-center items-center">{children}</div>
+    )}
   </div>
 ));
 Separator.displayName = SeparatorPrimitive.Root.displayName;

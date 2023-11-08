@@ -1,4 +1,43 @@
 {
+  "form": {
+    "sign-in": {
+      "email": {
+        "label": "Adres e-mail",
+        "placeholder": "Wpisz adres e-mail",
+        "validation": {
+          "required": "Adres e-mail jest wymagany",
+          "format": "Adres e-mail jest nieprawidłowy"
+        }
+      },
+      "password": {
+        "label": "Hasło",
+        "placeholder": "Wpisz hasło",
+        "validation": {
+          "required": "Hasło jest wymagane",
+          "min": "Hasło musi mieć co najmniej 6 znaków"
+        }
+      },
+      "remember-me": {
+        "label": "Nie wylogowuj mnie"
+      },
+      "submit": {
+        "label": "zaloguj się"
+      }
+    },
+    "password-remind": {
+      "email": {
+        "label": "Adres e-mail",
+        "placeholder": "Wpisz adres e-mail",
+        "validation": {
+          "required": "Adres e-mail jest wymagany",
+          "email": "Adres e-mail jest nieprawidłowy"
+        }
+      },
+      "submit": {
+        "label": "przypomnij hasło"
+      }
+    }
+  },
   "component": {
     "theme-toggler": {
       "label": "Wybierz motyw",
@@ -8,6 +47,12 @@
     }
   },
   "layout": {
+    "auth": {
+      "title": "Świadczenie publiczne",
+      "logo": {
+        "alt": "logo aplikacji"
+      }
+    },
     "error": {
       "title": "Świadczenie publiczne",
       "logo": {
@@ -82,11 +127,27 @@
       "password-remind": {
         "meta": {
           "title": "Przypomnij hasło"
+        },
+        "header": {
+          "title": "Przypomnij hasło"
+        },
+        "body": {
+          "remember-password": "Pamiętasz swoje hasło?",
+          "sign-in": "Zaloguj się!"
         }
       },
       "sign-in": {
         "meta": {
           "title": "Logowanie"
+        },
+        "header": {
+          "title": "Logowanie"
+        },
+        "body": {
+          "continue-with": "kontynuuj za pomocą",
+          "or": "lub",
+          "no-account": "Nie masz konta?",
+          "sign-up": "Zarejestruj się"
         }
       },
       "sign-up": {

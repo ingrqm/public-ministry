@@ -10,8 +10,9 @@
   },
   "aliases": {
     "providers": "@/providers",
-    "components": "@/components",
     "hooks": "@/hooks",
+    "forms": "@/forms",
+    "components": "@/components",
     "utils": "@/utils",
     "styles": "@/styles",
     "assets": "@/assets"

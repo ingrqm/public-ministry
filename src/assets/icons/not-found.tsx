@@ -1,4 +1,4 @@
-export const NotFoundImage = () => (
+export const NotFoundIcon = () => (
   <svg width={252} height={294}>
     <g fill="none" fillRule="evenodd">
       <path
@@ -256,5 +256,3 @@ export const NotFoundImage = () => (
     </g>
   </svg>
 );
-
-export default NotFoundImage;

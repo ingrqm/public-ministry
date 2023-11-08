@@ -1,4 +1,4 @@
-const NotWorkingImage = () => (
+export const NotWorkingIcon = () => (
   <svg width={254} height={294}>
     <g fill="none" fillRule="evenodd">
       <path
@@ -305,5 +305,3 @@ const NotWorkingImage = () => (
     </g>
   </svg>
 );
-
-export default NotWorkingImage;

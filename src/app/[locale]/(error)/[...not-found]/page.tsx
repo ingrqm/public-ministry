@@ -6,7 +6,7 @@ import type { Locale } from '@/i18n';
 import { Link } from '@/components';
 import { Button, Typography } from '@/components/ui';
 
-import NotFoundImage from '@/assets/images/not-found';
+import { NotFoundIcon } from '@/assets/icons';
 
 type Props = {
   params: {
@@ -27,7 +27,7 @@ export default function NotFound() {
 
   return (
     <div className="flex flex-col items-center">
-      <NotFoundImage />
+      <NotFoundIcon />
       <Typography.Title level={4} className="mt-9">
         {t('body.heading')}
       </Typography.Title>
