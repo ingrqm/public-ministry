@@ -10,6 +10,8 @@ import { Button, Separator, Typography } from '@/components/ui';
 
 import { AppleIcon, GoogleIcon } from '@/assets/icons';
 
+export const dynamic = 'force-dynamic';
+
 type Props = {
   params: {
     locale: Locale;
