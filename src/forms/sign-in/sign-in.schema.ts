@@ -1,25 +1,27 @@
-import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 
+import { getValidator } from '@/utils';
+
 export enum FormInputs {
-  mail = 'mail',
+  email = 'email',
   password = 'password',
-  rememberMe = 'rememberMe',
+  rememberMe = 'remember-me',
 }
 
-export const getSchema = (t: (key: string) => string) =>
-  z.object({
-    [FormInputs.mail]: z.string().min(1, t('email.validation.required')).email(t('email.validation.format')),
-    [FormInputs.password]: z.string().min(1, t('password.validation.required')).min(6, t('password.validation.min')),
+export const schema = (t: (key: string) => string) => {
+  const validator = getValidator({ t });
+
+  return z.object({
+    [FormInputs.email]: validator.email({ inputKey: FormInputs.email }),
+    [FormInputs.password]: validator.password({ inputKey: FormInputs.password }),
     [FormInputs.rememberMe]: z.boolean(),
   });
+};
 
-export const getResolver = (t: (key: string) => string) => zodResolver(getSchema(t));
-
-export type FormTypes = z.output<ReturnType<typeof getSchema>>;
+export type FormTypes = z.output<ReturnType<typeof schema>>;
 
 export const defaultValues: FormTypes = {
-  [FormInputs.mail]: '',
+  [FormInputs.email]: '',
   [FormInputs.password]: '',
   [FormInputs.rememberMe]: false,
 };

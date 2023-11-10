@@ -6,9 +6,7 @@ import type { Locale } from '@/i18n';
 import { SignInForm } from '@/forms';
 
 import { Link } from '@/components';
-import { Button, Separator, Typography } from '@/components/ui';
-
-import { AppleIcon, GoogleIcon } from '@/assets/icons';
+import { Typography } from '@/components/ui';
 
 export const dynamic = 'force-dynamic';
 
@@ -31,22 +29,6 @@ export default function SignIn() {
 
   return (
     <div className="flex justify-center items-center flex-col w-full">
-      <Separator>
-        <Typography.Small>{t('continue-with')}</Typography.Small>
-      </Separator>
-      <div className="flex justify-center gap-8 py-5">
-        <Button variant={'link'} size={'icon'}>
-          <GoogleIcon />
-        </Button>
-        <Button variant={'link'} size={'icon'}>
-          <AppleIcon />
-        </Button>
-      </div>
-      <div className="mb-6 w-full">
-        <Separator>
-          <Typography.Small>{t('or')}</Typography.Small>
-        </Separator>
-      </div>
       <SignInForm />
       <Typography.Small className="mt-6">
         {t('no-account')}{' '}
