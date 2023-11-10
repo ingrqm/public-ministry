@@ -104,7 +104,7 @@ export default function Layout({ children }: LayoutProps) {
         </div>
 
         <motion.div
-          className="w-full px-10 max-w-[400px] mt-6 "
+          className="w-full px-10 max-w-[400px] mt-6"
           key={`${pathname}-content`}
           initial="hiddenWithSize"
           animate={['hiddenWithProperSize', 'visible']}
