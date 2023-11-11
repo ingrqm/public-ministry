@@ -8,6 +8,8 @@ export type Locale = (typeof locales)[number];
 
 export type Locales = typeof locales;
 
+export type TranslateFunction = (key: string, options?: Record<string, any>) => string;
+
 export default getRequestConfig(async ({ locale }) => ({
   messages: (await import(`./messages/${locale}.json`)).default,
 }));
