@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import type { TranslateFunction } from '@/i18n';
+
 import { getValidator } from '@/utils';
 
 export enum FormInputs {
@@ -8,7 +10,7 @@ export enum FormInputs {
   rememberMe = 'remember-me',
 }
 
-export const schema = (t: (key: string) => string) => {
+export const schema = (t: TranslateFunction) => {
   const validator = getValidator({ t });
 
   return z.object({
