@@ -14,6 +14,7 @@ module.exports = {
     '^@/i18n|^@/middleware|^@/prisma',
     '^@/providers*',
     '^@/hooks*',
+    '^@/emails*',
     '^@/forms*',
     '^@/components*',
     '^@/utils*',

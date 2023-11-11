@@ -80,7 +80,7 @@ export default function Layout({ children }: LayoutProps) {
           {segment !== null && <Typography.Title level={4}>{tPage('header.title')}</Typography.Title>}
         </motion.div>
       </motion.div>
-      <div className="w-full dark:bg-zinc-900 l md:w-1/2 ml-auto flex items-center justify-center flex-col">
+      <div className="w-full dark:bg-zinc-900 l md:w-1/2 ml-auto flex items-center justify-center flex-col py-10">
         <motion.div className="absolute top-4 right-4" initial="hidden" animate="visible" variants={variants}>
           <ThemeToggler />
         </motion.div>

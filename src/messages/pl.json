@@ -1,4 +1,38 @@
 {
+  "mail": {
+    "sender": "Świadczenie publiczne",
+    "password-remind": {
+      "subject": "Przypomnienie hasła",
+      "header": {
+        "brand": "Świadczenie publiczne",
+        "title": "resetowanie hasła"
+      },
+      "content": {
+        "welcome": "Hej {name}!",
+        "request-was-send": "Została do nas wysłana prośba o zresetowanie hasła dla Twojego konta.",
+        "request-from": "Pochodzi z przeglądarki {browser} i adresu {ipAddress}.",
+        "follow-instructions": "Postępuj zgodnie z poniższą instrukcją, jeśli to żądanie pochodzi od Ciebie.",
+        "fill-form": "Wystarczy wypełnić formularz zmiany hasła. W tym celu kliknij poniższy przycisk:",
+        "copy-to-url": "lub skopiuj i wklej ten adres URL do swojej przeglądarki:",
+        "accountSafe": "Zignoruj tę wiadomość, jeśli prośba o zresetowanie hasła nie pochodzi od Ciebie. Nie martw się, Twoje konto jest bezpieczne.",
+        "generated": "Jeśli nie jesteś zamierzonym odbiorcą tej wiadomości, daj nam znać lub zignoruj tę wiadomość. Ta wiadomość została wygenerowana automatycznie. Proszę nie odpowiadać."
+      },
+      "button": {
+        "change-password": "zmień hasło"
+      },
+      "image": {
+        "logo": {
+          "alt": "logo"
+        },
+        "envelope": {
+          "alt": "ikona koperty pocztowej"
+        }
+      }
+    }
+  },
+  "error": {
+    "user-not-exist": "Podany adres e-mail nie jest przypisany do żadnego konta"
+  },
   "form": {
     "input": {
       "email": {
@@ -94,6 +128,17 @@
         "submit": {
           "label": "przypomnij hasło"
         }
+      },
+      "message": {
+        "error": "Wystąpił błąd podczas wysyłania wiadomości e-mail",
+        "success": "Wysłano wiadomość e-mail z linkiem do zmiany hasła"
+      }
+    },
+    "password-recovery": {
+      "button": {
+        "submit": {
+          "label": "zmień hasło"
+        }
       }
     }
   },
@@ -185,6 +230,9 @@
       "password-recovery": {
         "meta": {
           "title": "Odzyskiwanie hasła | Świadczenie publiczne"
+        },
+        "header": {
+          "title": "odzyskiwanie hasła"
         }
       },
       "password-remind": {
