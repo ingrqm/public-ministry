@@ -85,11 +85,11 @@ export const getValidator = ({ t }: ValidatorProps) => ({
     const baseKey = getTranslationKey({ inputKey, placementKey });
 
     return [
-      (data: any) => data?.[inputs[0]] === data?.[inputs[1]],
+      (data) => data?.[inputs[0]] === data?.[inputs[1]],
       {
         message: t(`${baseKey}.match`),
         path: [inputKey],
-      } as any,
+      } as IssueData,
     ];
   },
   custom: ({ inputKey = 'text', placementKey, min, max, format }: ValidatorCustomProps) => {
