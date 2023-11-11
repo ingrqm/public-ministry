@@ -192,7 +192,7 @@
           "title": "Przypomnij hasło | Świadczenie publiczne"
         },
         "header": {
-          "title": "Przypomnij hasło"
+          "title": "przypomnij hasło"
         },
         "body": {
           "remember-password": "Pamiętasz swoje hasło?",
@@ -204,7 +204,7 @@
           "title": "Logowanie | Świadczenie publiczne"
         },
         "header": {
-          "title": "Logowanie"
+          "title": "logowanie"
         },
         "body": {
           "continue-with": "kontynuuj za pomocą",
@@ -218,7 +218,7 @@
           "title": "Rejestracja | Świadczenie publiczne"
         },
         "header": {
-          "title": "Rejestracja"
+          "title": "rejestracja"
         },
         "body": {
           "continue-with": "kontynuuj za pomocą",
