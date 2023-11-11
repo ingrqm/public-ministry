@@ -1,11 +1,9 @@
-import * as React from 'react';
-
 import { getTranslator } from 'next-intl/server';
 
 import { Body, Container, Head, Hr, Html, Img, Link, Tailwind, Text } from '@react-email/components';
 import { UAParser } from 'ua-parser-js';
 
-import { Locale } from '@/i18n';
+import type { Locale } from '@/i18n';
 
 type PasswordRemindProps = {
   locale: Locale;
