@@ -19,11 +19,6 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectItem,
-  Select,
 } from '@/components/ui';
 
 export type FormFieldProps<TFieldValues extends FieldValues> = {
