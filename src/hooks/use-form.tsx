@@ -1,6 +1,6 @@
 'use client';
 
-import { cloneElement } from 'react';
+import { cloneElement, useMemo } from 'react';
 import type { ReactElement, ReactNode } from 'react';
 
 import { useTranslations } from 'next-intl';
@@ -10,6 +10,8 @@ import { useForm as useFormRaw } from 'react-hook-form';
 import type { Control, UseFormReturn, FieldValues, Path, DefaultValues } from 'react-hook-form';
 import type { ZodType, AnyZodObject } from 'zod';
 
+import type { TranslateFunction } from '@/i18n';
+
 import {
   Form as FormRaw,
   FormControl,
@@ -17,14 +19,19 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+  Select,
 } from '@/components/ui';
 
-type FormRowProps<TFieldValues extends FieldValues> = {
+export type FormFieldProps<TFieldValues extends FieldValues> = {
   name: Path<TFieldValues>;
   children: ReactElement;
   addon?: ReactNode;
   label?: string | ReactNode;
-  valuePropName?: 'checked';
+  valuePropName?: 'checked' | 'selected';
   hideMessage?: boolean;
 };
 
@@ -36,7 +43,23 @@ function getFormField<TFieldValues extends FieldValues>(control: Control<TFieldV
     label,
     valuePropName,
     hideMessage = false,
-  }: FormRowProps<TFieldValues>) {
+  }: FormFieldProps<TFieldValues>) {
+    if (valuePropName === 'selected') {
+      return (
+        <FormFieldRaw
+          control={control}
+          name={name}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              {cloneElement(children, { onValueChange: field.onChange, defaultValue: field.value })}
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      );
+    }
+
     if (valuePropName === 'checked') {
       return (
         <FormFieldRaw
@@ -79,13 +102,13 @@ function getFormField<TFieldValues extends FieldValues>(control: Control<TFieldV
   };
 }
 
-type FormProps<T> = {
+type FormProps = {
   onSubmit: (values: any) => void;
   children: ReactNode;
 };
 
 function getForm<T extends FieldValues>(form: UseFormReturn<T>) {
-  return function Form({ onSubmit, children }: FormProps<T>) {
+  return function Form({ onSubmit, children }: FormProps) {
     return (
       <FormRaw {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
@@ -97,7 +120,7 @@ function getForm<T extends FieldValues>(form: UseFormReturn<T>) {
 }
 
 type UseFormProps<T extends FieldValues> = {
-  schema: (t: (key: string) => string) => ZodType<T, any, any> | AnyZodObject;
+  schema: (t: TranslateFunction) => ZodType<T, any, any> | AnyZodObject;
   defaultValues: DefaultValues<T>;
 };
 
@@ -110,7 +133,12 @@ export function useForm<T extends FieldValues>({
   const form = useFormRaw<T>({
     resolver: zodResolver(schema(t)),
     defaultValues,
+    mode: 'onChange',
   });
 
-  return [getForm<T>(form), getFormField<T>(form.control), form];
+  const Form = useMemo(() => getForm<T>(form), [form]);
+
+  const FormField = useMemo(() => getFormField<T>(form.control), [form.control]);
+
+  return [Form, FormField, form];
 }
