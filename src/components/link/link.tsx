@@ -6,6 +6,7 @@ import NextLink, { type LinkProps as NextLinkProps } from 'next/link';
 import { defaultLocale } from '@/i18n';
 
 type LinkProps = NextLinkProps & {
+  className?: string;
   children: ReactNode;
 };
 

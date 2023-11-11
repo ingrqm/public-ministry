@@ -45,6 +45,7 @@ export default async function RootLayout({ children, params: { locale } }: RootL
         <link rel="manifest" href="/assets/site.webmanifest" />
         <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#09090b" />
         <link rel="shortcut icon" href="/assets/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="msapplication-TileColor" content="#09090b" />
         <meta name="msapplication-TileImage" content="/assets/mstile-144x144.png" />
         <meta name="msapplication-config" content="/assets/browserconfig.xml" />

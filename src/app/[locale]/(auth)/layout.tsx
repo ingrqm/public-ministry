@@ -3,7 +3,7 @@
 import { useState, useEffect, type ReactNode, useRef } from 'react';
 
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+import { useSelectedLayoutSegment } from 'next/navigation';
 
 import { motion } from 'framer-motion';
 
@@ -20,15 +20,13 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   const contentRef = useRef<HTMLDivElement>(null);
-  const currentPathname = usePathname();
-  const [pathname, setPathname] = useState(currentPathname);
+  const segment = useSelectedLayoutSegment();
+  const [previousSegment, setPreviousSegment] = useState(segment);
   const [isRouteChange, setIsRouteChange] = useState(false);
   const isMobile = useIsMobile();
 
-  const filename = pathname.split('/').pop();
-
   const tLayout = useTranslations('layout.auth');
-  const tPage = useTranslations(`page.auth.${filename}`);
+  const tPage = useTranslations(`page.auth.${segment}`);
 
   const variants = {
     hidden: {
@@ -57,11 +55,11 @@ export default function Layout({ children }: LayoutProps) {
   };
 
   useEffect(() => {
-    if (pathname !== currentPathname) {
-      setPathname(currentPathname);
+    if (segment !== previousSegment) {
+      setPreviousSegment(segment);
       setIsRouteChange(true);
     }
-  }, [currentPathname, pathname]);
+  }, [segment, previousSegment]);
 
   return (
     <div className="flex min-h-screen">
@@ -78,8 +76,8 @@ export default function Layout({ children }: LayoutProps) {
         <motion.div initial="hidden" animate="visible" variants={variants}>
           <Typography.Title level={3}>{tLayout('title')}</Typography.Title>
         </motion.div>
-        <motion.div key={`${pathname}-heading`} initial="hidden" animate="visible" variants={variants}>
-          {filename !== null && <Typography.Title level={4}>{tPage('header.title')}</Typography.Title>}
+        <motion.div key={`${segment}-heading`} initial="hidden" animate="visible" variants={variants}>
+          {segment !== null && <Typography.Title level={4}>{tPage('header.title')}</Typography.Title>}
         </motion.div>
       </motion.div>
       <div className="w-full dark:bg-zinc-900 l md:w-1/2 ml-auto flex items-center justify-center flex-col">
@@ -94,8 +92,8 @@ export default function Layout({ children }: LayoutProps) {
               {tLayout('title')}
             </Typography.Title>
           </motion.div>
-          <motion.div key={`${pathname}-heading`} initial="hidden" animate="visible" variants={variants}>
-            {filename !== null && (
+          <motion.div key={`${segment}-heading`} initial="hidden" animate="visible" variants={variants}>
+            {segment !== null && (
               <Typography.Title className="mt-6" level={4}>
                 {tPage('header.title')}
               </Typography.Title>
@@ -104,8 +102,8 @@ export default function Layout({ children }: LayoutProps) {
         </div>
 
         <motion.div
-          className="w-full px-10 max-w-[400px] mt-6 "
-          key={`${pathname}-content`}
+          className="w-full px-10 max-w-[400px] mt-6"
+          key={`${segment}-content`}
           initial="hiddenWithSize"
           animate={['hiddenWithProperSize', 'visible']}
           exit="hiddenWithSize"

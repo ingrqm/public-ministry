@@ -2,44 +2,33 @@
 
 import { useTranslations } from 'next-intl';
 
-import { useForm } from 'react-hook-form';
+import { useForm } from '@/hooks';
 
-import { Button, Form, FormControl, FormField, FormItem, FormLabel, FormMessage, Input } from '@/components/ui';
+import { Button, Input } from '@/components/ui';
 
-import { defaultValues, FormInputs, getResolver, type FormTypes } from './password-remind.schema';
+import { defaultValues, FormInputs, type FormTypes, schema } from './password-remind.schema';
 
 export const PasswordRemindForm = () => {
-  const t = useTranslations('form.password-remind');
+  const t = useTranslations('form');
 
-  const form = useForm<FormTypes>({
-    resolver: getResolver(t),
+  const [Form, FormField] = useForm<FormTypes>({
+    schema,
     defaultValues,
   });
 
-  function onSubmit(values: FormTypes) {
+  const handleSubmit = (values: FormTypes) => {
     console.log(values);
-  }
+  };
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
-        <FormField
-          control={form.control}
-          name={FormInputs.mail}
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>{t('email.label')}</FormLabel>
-              <FormControl>
-                <Input type="text" placeholder={t('email.placeholder')} {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button className="mt-6 w-full" type="submit">
-          {t('submit.label')}
-        </Button>
-      </form>
+    <Form onSubmit={handleSubmit}>
+      <FormField name={FormInputs.email} label={t('input.email.label')}>
+        <Input type="text" placeholder={t('input.email.placeholder')} />
+      </FormField>
+
+      <Button className="mt-2 w-full" type="submit">
+        {t('password-remind.button.submit.label')}
+      </Button>
     </Form>
   );
 };

@@ -1,6 +1,6 @@
 {
   "form": {
-    "sign-in": {
+    "input": {
       "email": {
         "label": "Adres e-mail",
         "placeholder": "Wpisz adres e-mail",
@@ -14,31 +14,94 @@
         "placeholder": "Wpisz hasło",
         "validation": {
           "required": "Hasło jest wymagane",
-          "min": "Hasło musi mieć co najmniej 6 znaków"
+          "min": "Hasło musi mieć co najmniej {min} znaków"
         }
       },
+      "repeat-password": {
+        "label": "Powtórz hasło",
+        "placeholder": "Powtórz swoje hasło",
+        "validation": {
+          "required": "Hasło jest wymagane",
+          "min": "Hasło musi mieć co najmniej {min} znaków",
+          "match": "Hasła muszą być takie same"
+        }
+      },
+      "name": {
+        "label": "Imię",
+        "placeholder": "Wpisz swoje imię",
+        "validation": {
+          "required": "Imię jest wymagane",
+          "min": "Imię musi mieć co najmniej {min} znaków"
+        }
+      },
+      "surname": {
+        "label": "Nazwisko",
+        "placeholder": "Wpisz swoje nazwisko",
+        "validation": {
+          "required": "Nazwisko jest wymagane",
+          "min": "Nazwisko musi mieć co najmniej {min} znaków"
+        }
+      },
+      "phone": {
+        "label": "Numer telefonu",
+        "placeholder": "Wpisz swój numer telefonu",
+        "validation": {
+          "required": "Numer telefonu jest wymagany",
+          "format": "Numer telefonu jest nieprawidłowy"
+        }
+      },
+      "congregation": {
+        "label": "Zbór",
+        "placeholder": "Wybierz swój zbór",
+        "validation": {
+          "required": "Zbór jest wymagany"
+        }
+      }
+    },
+    "sign-in": {
       "remember-me": {
         "label": "Nie wylogowuj mnie"
       },
-      "submit": {
-        "label": "zaloguj się"
+      "forgot-password": {
+        "label": "Nie pamiętasz hasła?"
+      },
+      "button": {
+        "submit": {
+          "label": "zaloguj się"
+        }
+      }
+    },
+    "sign-up": {
+      "button": {
+        "submit": {
+          "label": "zarejestruj się"
+        },
+        "profile": {
+          "label": "profil"
+        }
+      },
+      "tab": {
+        "account": {
+          "label": "konto"
+        },
+        "profile": {
+          "label": "profil"
+        }
       }
     },
     "password-remind": {
-      "email": {
-        "label": "Adres e-mail",
-        "placeholder": "Wpisz adres e-mail",
-        "validation": {
-          "required": "Adres e-mail jest wymagany",
-          "email": "Adres e-mail jest nieprawidłowy"
+      "button": {
+        "submit": {
+          "label": "przypomnij hasło"
         }
-      },
-      "submit": {
-        "label": "przypomnij hasło"
       }
     }
   },
   "component": {
+    "social-auth": {
+      "continue-with": "kontynuuj za pomocą",
+      "or": "lub"
+    },
     "theme-toggler": {
       "label": "Wybierz motyw",
       "light": "jasny",
@@ -129,7 +192,7 @@
           "title": "Przypomnij hasło | Świadczenie publiczne"
         },
         "header": {
-          "title": "Przypomnij hasło"
+          "title": "przypomnij hasło"
         },
         "body": {
           "remember-password": "Pamiętasz swoje hasło?",
@@ -141,7 +204,7 @@
           "title": "Logowanie | Świadczenie publiczne"
         },
         "header": {
-          "title": "Logowanie"
+          "title": "logowanie"
         },
         "body": {
           "continue-with": "kontynuuj za pomocą",
@@ -153,6 +216,15 @@
       "sign-up": {
         "meta": {
           "title": "Rejestracja | Świadczenie publiczne"
+        },
+        "header": {
+          "title": "rejestracja"
+        },
+        "body": {
+          "continue-with": "kontynuuj za pomocą",
+          "or": "lub",
+          "have-account": "Masz konto?",
+          "sign-in": "Zaloguj się!"
         }
       }
     },
