@@ -14,7 +14,7 @@
         "placeholder": "Wpisz hasło",
         "validation": {
           "required": "Hasło jest wymagane",
-          "min": "Hasło musi mieć co najmniej 6 znaków"
+          "min": "Hasło musi mieć co najmniej {min} znaków"
         }
       },
       "repeat-password": {
@@ -22,7 +22,8 @@
         "placeholder": "Powtórz swoje hasło",
         "validation": {
           "required": "Hasło jest wymagane",
-          "min": "Hasło musi mieć co najmniej 6 znaków"
+          "min": "Hasło musi mieć co najmniej {min} znaków",
+          "match": "Hasła muszą być takie same"
         }
       },
       "name": {
@@ -30,7 +31,7 @@
         "placeholder": "Wpisz swoje imię",
         "validation": {
           "required": "Imię jest wymagane",
-          "min": "Imię musi mieć co najmniej {{min}} znaków"
+          "min": "Imię musi mieć co najmniej {min} znaków"
         }
       },
       "surname": {
@@ -38,7 +39,7 @@
         "placeholder": "Wpisz swoje nazwisko",
         "validation": {
           "required": "Nazwisko jest wymagane",
-          "min": "Nazwisko musi mieć co najmniej {{min}} znaków"
+          "min": "Nazwisko musi mieć co najmniej {min} znaków"
         }
       },
       "phone": {
@@ -47,6 +48,13 @@
         "validation": {
           "required": "Numer telefonu jest wymagany",
           "format": "Numer telefonu jest nieprawidłowy"
+        }
+      },
+      "congregation": {
+        "label": "Zbór",
+        "placeholder": "Wybierz swój zbór",
+        "validation": {
+          "required": "Zbór jest wymagany"
         }
       }
     },
@@ -67,6 +75,14 @@
       "button": {
         "submit": {
           "label": "zarejestruj się"
+        },
+        "profile": {
+          "label": "profil"
+        }
+      },
+      "tab": {
+        "account": {
+          "label": "konto"
         },
         "profile": {
           "label": "profil"
@@ -208,7 +224,7 @@
           "continue-with": "kontynuuj za pomocą",
           "or": "lub",
           "have-account": "Masz konto?",
-          "sign-in": "Zaloguj się"
+          "sign-in": "Zaloguj się!"
         }
       }
     },
