@@ -26,7 +26,7 @@ export const PasswordRemindForm = () => {
         <Input type="text" placeholder={t('input.email.placeholder')} />
       </FormField>
 
-      <Button className="mt-6 w-full" type="submit">
+      <Button className="mt-2 w-full" type="submit">
         {t('password-remind.button.submit.label')}
       </Button>
     </Form>

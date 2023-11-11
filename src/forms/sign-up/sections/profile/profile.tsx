@@ -58,7 +58,7 @@ export const Profile = ({ field: FormField, congregations }: AccountProps) => {
         </Select>
       </FormField>
 
-      <Button className="mt-6 w-full" type="submit">
+      <Button className="mt-2 w-full" type="submit">
         {t('sign-up.button.submit.label')}
       </Button>
     </>

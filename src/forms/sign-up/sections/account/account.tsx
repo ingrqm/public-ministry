@@ -30,7 +30,7 @@ export const Account = ({ field: FormField, onGoToProfile }: AccountProps) => {
         <Input type="password" placeholder={t('input.repeat-password.placeholder')} />
       </FormField>
 
-      <Button type="button" onClick={onGoToProfile} className="mt-6 w-full">
+      <Button type="button" onClick={onGoToProfile} className="mt-2 w-full">
         {t('sign-up.button.profile.label')}
       </Button>
     </>
