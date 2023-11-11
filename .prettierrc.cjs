@@ -11,7 +11,7 @@ module.exports = {
     '^react$',
     '(^next|^next*)',
     '<THIRD_PARTY_MODULES>',
-    '^@/i18n|^@/middleware',
+    '^@/i18n|^@/middleware|^@/prisma',
     '^@/providers*',
     '^@/hooks*',
     '^@/forms*',
