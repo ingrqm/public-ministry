@@ -3,7 +3,7 @@
 import { useState, useEffect, type ReactNode } from 'react';
 
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+import { useSelectedLayoutSegment } from 'next/navigation';
 
 import { motion } from 'framer-motion';
 
@@ -21,13 +21,12 @@ type LayoutProps = {
 const files = ['not-found', 'not-authorized', 'not-working'];
 
 export default function Layout({ children }: LayoutProps) {
-  const currentPathname = usePathname();
-  const [pathname, setPathname] = useState(currentPathname);
+  const segment = useSelectedLayoutSegment();
+  const [previousSegment, setPreviousSegment] = useState(segment);
   const [isRouteChange, setIsRouteChange] = useState(false);
   const isMobile = useIsMobile();
 
-  const filename = pathname.split('/').pop();
-  const key = files.find((file) => file === filename) ?? 'not-found';
+  const key = files.find((file) => file === segment) ?? 'not-found';
 
   const tLayout = useTranslations('layout.error');
   const tPage = useTranslations(`page.error.${key}`);
@@ -47,11 +46,11 @@ export default function Layout({ children }: LayoutProps) {
   };
 
   useEffect(() => {
-    if (pathname !== currentPathname) {
-      setPathname(currentPathname);
+    if (segment !== previousSegment) {
+      setPreviousSegment(segment);
       setIsRouteChange(true);
     }
-  }, [currentPathname, pathname]);
+  }, [segment, previousSegment]);
 
   return (
     <div className="flex min-h-screen">
@@ -68,8 +67,8 @@ export default function Layout({ children }: LayoutProps) {
         <motion.div initial="hidden" animate="visible" variants={variants}>
           <Typography.Title level={3}>{tLayout('title')}</Typography.Title>
         </motion.div>
-        <motion.div key={`${pathname}-heading`} initial="hidden" animate="visible" variants={variants}>
-          {filename !== null && <Typography.Title level={4}>{tPage('header.title')}</Typography.Title>}
+        <motion.div key={`${segment}-heading`} initial="hidden" animate="visible" variants={variants}>
+          {segment !== null && <Typography.Title level={4}>{tPage('header.title')}</Typography.Title>}
         </motion.div>
       </motion.div>
       <div className="w-full dark:bg-zinc-900 l md:w-1/2 ml-auto flex items-center justify-center flex-col">
@@ -77,7 +76,7 @@ export default function Layout({ children }: LayoutProps) {
           <ThemeToggler />
         </motion.div>
 
-        <motion.div key={`${pathname}-content`} initial="hidden" animate="visible" variants={variants}>
+        <motion.div key={`${segment}-content`} initial="hidden" animate="visible" variants={variants}>
           {children}
         </motion.div>
       </div>
