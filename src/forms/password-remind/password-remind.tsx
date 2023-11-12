@@ -14,6 +14,7 @@ export const PasswordRemindForm = () => {
   const [Form, FormField] = useForm<FormTypes>({
     schema,
     defaultValues,
+    key: 'password-remind',
   });
 
   const handleSubmit = (values: FormTypes) => {
