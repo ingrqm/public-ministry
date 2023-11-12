@@ -1,4 +1,4 @@
-import { ReadonlyHeaders } from 'next/dist/server/web/spec-extension/adapters/headers';
+import type { ReadonlyHeaders } from 'next/dist/server/web/spec-extension/adapters/headers';
 
 export const getIpAddress = (headers: ReadonlyHeaders) => {
   const xRealIp = headers.get('x-real-ip');
