@@ -1,24 +1,12 @@
 {
   "mail": {
     "sender": "Świadczenie publiczne",
-    "password-remind": {
-      "subject": "Przypomnienie hasła",
+    "template": {
       "header": {
-        "brand": "Świadczenie publiczne",
-        "title": "resetowanie hasła"
+        "brand": "Świadczenie publiczne"
       },
       "content": {
-        "welcome": "Hej {name}!",
-        "request-was-send": "Została do nas wysłana prośba o zresetowanie hasła dla Twojego konta.",
-        "request-from": "Pochodzi z przeglądarki {browser} i adresu {ipAddress}.",
-        "follow-instructions": "Postępuj zgodnie z poniższą instrukcją, jeśli to żądanie pochodzi od Ciebie.",
-        "fill-form": "Wystarczy wypełnić formularz zmiany hasła. W tym celu kliknij poniższy przycisk:",
-        "copy-to-url": "lub skopiuj i wklej ten adres URL do swojej przeglądarki:",
-        "accountSafe": "Zignoruj tę wiadomość, jeśli prośba o zresetowanie hasła nie pochodzi od Ciebie. Nie martw się, Twoje konto jest bezpieczne.",
         "generated": "Jeśli nie jesteś zamierzonym odbiorcą tej wiadomości, daj nam znać lub zignoruj tę wiadomość. Ta wiadomość została wygenerowana automatycznie. Proszę na nią nie odpowiadać."
-      },
-      "button": {
-        "change-password": "zmień hasło"
       },
       "image": {
         "logo": {
@@ -27,6 +15,99 @@
         "envelope": {
           "alt": "ikona koperty pocztowej"
         }
+      }
+    },
+    "password-remind": {
+      "subject": "Przypomnienie hasła",
+      "header": {
+        "title": "resetowanie hasła"
+      },
+      "content": {
+        "welcome": "Hej {name}!",
+        "request-was-send": "Została do nas wysłana prośba o zresetowanie hasła dla Twojego konta.",
+        "request-from": "Pochodzi z przeglądarki {browser} i adresu {ipAddress}.",
+        "follow-instructions": "Postępuj zgodnie z poniższą instrukcją, jeśli to żądanie pochodzi od Ciebie.",
+        "fill-form": "Wystarczy wypełnić formularz zmiany hasła. ",
+        "copy-to-url": "lub skopiuj i wklej ten adres URL do swojej przeglądarki:",
+        "account-safe": "Zignoruj tę wiadomość, jeśli prośba o zresetowanie hasła nie pochodzi od Ciebie. Nie martw się, Twoje konto jest bezpieczne.",
+        "click-button": "W tym celu kliknij poniższy przycisk:"
+      },
+      "button": {
+        "change-password": "zmień hasło"
+      }
+    },
+    "password-recovery": {
+      "subject": "Zmiana hasła",
+      "header": {
+        "title": "zmiana hasła"
+      },
+      "content": {
+        "welcome": "Hej {name}!",
+        "password-was-change": "Dane logowania do Twojego konta właśnie zostały zmienione. Wysłaliśmy tego e-maila, aby upewnić się, że to Ty.",
+        "not-fully-correspond": "Wyświetlane dane mogą nie w pełni odpowiadać faktycznemu stanowi urządzenia użytkownika.",
+        "not-safe": "Jeśli to nie Ty zmieniłeś hasło, prawdopodobnie Twoja skrzynka e-mail nie jest bezpieczna. Zmień hasło do swojej skrzynki i koniecznie skontaktuj się z nami.",
+        "date": "Data: {date}",
+        "ip-address": "Adres IP: {ipAddress}",
+        "browser": "Przeglądarka: {browser}",
+        "version": "Wersja: {version}",
+        "system": "System: {system}"
+      }
+    },
+    "sign-up": {
+      "header": {
+        "title": "rejestracja"
+      },
+      "content": {
+        "welcome": "Hej {name}!",
+        "account-created": "Właśnie utworzyłeś konto w aplikacji Świadczenie publiczne. Tylko krok dzieli Cię od korzystania z naszej aplikacji.",
+        "active-account": "Po prostu potwierdź swój adres e-mail.",
+        "click-button": "W tym celu kliknij poniższy przycisk:",
+        "copy-to-url": "lub skopiuj i wklej ten adres URL do swojej przeglądarki:",
+        "account-safe": "Zignoruj tę wiadomość, jeśli to nie Ty się zarejestrowałeś. Nie martw się, Twój adres e-mail jest bezpieczny."
+      },
+      "button": {
+        "active-account": "potwierdź adres e-mail"
+      }
+    },
+    "access-granted": {
+      "header": {
+        "title": "przyznano dostęp"
+      },
+      "content": {
+        "welcome": "Hej {name}!",
+        "granted": "Administrator przyznał Ci dostęp do aplikacji. ",
+        "sign-in": "Możesz się zalogować i zacząć korzystać z aplikacji.",
+        "click-button": "W tym celu kliknij poniższy przycisk:",
+        "copy-to-url": "lub skopiuj i wklej ten adres URL do swojej przeglądarki:"
+      },
+      "button": {
+        "sign-in": "zaloguj się"
+      }
+    },
+    "access-denied": {
+      "header": {
+        "title": "odebrano dostęp"
+      },
+      "content": {
+        "denied": "Administrator odebrał Ci dostęp do aplikacji.  Dalej możesz się zalogować i edytować swój profil lub usunąć konto, jednak nie masz dostępu do reszty funkcjonalności. ",
+        "contact-us": "Jeśli uważasz, że to pomyłka, skontaktuj się z nami.",
+        "welcome": "Hej {name}!"
+      }
+    },
+    "account-deleted": {
+      "content": {
+        "account-deleted": "Twoje konto zostało usunięte.",
+        "welcome": "Hej {name}!",
+        "date": "Data: {date}",
+        "ip-address": "Adres IP: {ipAddress}",
+        "browser": "Przeglądarka: {browser}",
+        "version": "Wersja: {version}",
+        "system": "System: {system}",
+        "not-fully-correspond": "Wyświetlane dane mogą nie w pełni odpowiadać faktycznemu stanowi urządzenia użytkownika.",
+        "contact-us": "Jeśli to nie Ty usunąłeś konto koniecznie skontaktuj się z nami."
+      },
+      "header": {
+        "title": "usunięto konto"
       }
     }
   },
@@ -103,6 +184,10 @@
         "submit": {
           "label": "zaloguj się"
         }
+      },
+      "message": {
+        "error": "Wystąpił błąd podczas logowania",
+        "success": "Zalogowano pomyślnie"
       }
     },
     "sign-up": {
@@ -121,6 +206,10 @@
         "profile": {
           "label": "profil"
         }
+      },
+      "message": {
+        "error": "Wystąpił błąd podczas rejestracji",
+        "success": "Konto zostało utworzone. Na podany adres e-mail została wysłana wiadomość zawierająca link aktywacyjny"
       }
     },
     "password-remind": {
@@ -139,6 +228,10 @@
         "submit": {
           "label": "zmień hasło"
         }
+      },
+      "message": {
+        "error": "Wystąpił błąd podczas zmiany hasła",
+        "success": "Hasło zostało zmienione"
       }
     }
   },
