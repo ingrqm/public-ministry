@@ -113,6 +113,8 @@ function getForm<T extends FieldValues>(form: UseFormReturn<T>, key: string) {
       try {
         await onSubmit(values);
 
+        form.reset();
+
         toast({
           description: t(`form.${key}.message.success`),
         });
