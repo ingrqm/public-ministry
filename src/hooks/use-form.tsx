@@ -12,6 +12,8 @@ import type { ZodType, AnyZodObject } from 'zod';
 
 import type { TranslateFunction } from '@/i18n';
 
+import { useToast } from '@/hooks';
+
 import {
   Form as FormRaw,
   FormControl,
@@ -102,11 +104,31 @@ type FormProps = {
   children: ReactNode;
 };
 
-function getForm<T extends FieldValues>(form: UseFormReturn<T>) {
+function getForm<T extends FieldValues>(form: UseFormReturn<T>, key: string) {
   return function Form({ onSubmit, children }: FormProps) {
+    const t = useTranslations();
+    const { toast } = useToast();
+
+    const handleSubmit = async (values: T) => {
+      try {
+        await onSubmit(values);
+
+        toast({
+          description: t(`form.${key}.message.success`),
+        });
+      } catch (error) {
+        const errorMessageKey = (error as Error)?.message || `form.${key}.message.error`;
+
+        toast({
+          description: t(`error.${errorMessageKey}`),
+          variant: 'destructive',
+        });
+      }
+    };
+
     return (
       <FormRaw {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
+        <form onSubmit={form.handleSubmit(handleSubmit)} className="w-full">
           {children}
         </form>
       </FormRaw>
@@ -117,11 +139,13 @@ function getForm<T extends FieldValues>(form: UseFormReturn<T>) {
 type UseFormProps<T extends FieldValues> = {
   schema: (t: TranslateFunction) => ZodType<T, any, any> | AnyZodObject;
   defaultValues: DefaultValues<T>;
+  key: string;
 };
 
 export function useForm<T extends FieldValues>({
   schema,
   defaultValues,
+  key,
 }: UseFormProps<T>): [ReturnType<typeof getForm>, ReturnType<typeof getFormField<T>>, UseFormReturn<T>] {
   const t = useTranslations('form');
 
@@ -131,7 +155,7 @@ export function useForm<T extends FieldValues>({
     mode: 'onChange',
   });
 
-  const Form = useMemo(() => getForm<T>(form), [form]);
+  const Form = useMemo(() => getForm<T>(form, key), [form, key]);
 
   const FormField = useMemo(() => getFormField<T>(form.control), [form.control]);
 

@@ -15,6 +15,7 @@ export const SignInForm = () => {
   const [Form, FormField] = useForm<FormTypes>({
     schema,
     defaultValues,
+    key: 'sign-in',
   });
 
   const handleSubmit = (values: FormTypes) => {

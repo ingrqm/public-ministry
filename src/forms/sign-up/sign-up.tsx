@@ -25,6 +25,7 @@ export const SignUpForm = ({ congregations }: SignUpFormProps) => {
   const [Form, FormField, { trigger }] = useForm<FormTypes>({
     schema,
     defaultValues,
+    key: 'sign-up',
   });
 
   const handleGoToProfile = async () => {

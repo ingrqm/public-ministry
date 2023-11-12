@@ -9,4 +9,5 @@ export * from './label';
 export * from './select';
 export * from './separator';
 export * from './tabs';
+export * from './toast';
 export * from './typography';

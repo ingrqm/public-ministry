@@ -15,7 +15,7 @@
         "fill-form": "Wystarczy wypełnić formularz zmiany hasła. W tym celu kliknij poniższy przycisk:",
         "copy-to-url": "lub skopiuj i wklej ten adres URL do swojej przeglądarki:",
         "accountSafe": "Zignoruj tę wiadomość, jeśli prośba o zresetowanie hasła nie pochodzi od Ciebie. Nie martw się, Twoje konto jest bezpieczne.",
-        "generated": "Jeśli nie jesteś zamierzonym odbiorcą tej wiadomości, daj nam znać lub zignoruj tę wiadomość. Ta wiadomość została wygenerowana automatycznie. Proszę nie odpowiadać."
+        "generated": "Jeśli nie jesteś zamierzonym odbiorcą tej wiadomości, daj nam znać lub zignoruj tę wiadomość. Ta wiadomość została wygenerowana automatycznie. Proszę na nią nie odpowiadać."
       },
       "button": {
         "change-password": "zmień hasło"
